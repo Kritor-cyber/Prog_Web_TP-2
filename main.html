@@ -97,6 +97,15 @@
                 width: 1000px;
             }
         }
+
+        @media (max-width: 1000px) {
+            #buttonsContainer {
+                display: flex;
+                flex-direction: column;
+                /* Pour avoir un affichage propre sur de petits écrans (sur plusieurs lignes si nécessaire) */
+                flex-wrap: wrap;
+            }
+        }
     </style>
 </head>
 <body>
