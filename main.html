@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<!-- 1. -->
+<!-- 2. -->
 
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -21,21 +21,24 @@
             font-weight: bold;
             font-size: 2em;
         }
+        .textZone {
+            width: 300px;
+        }
     </style>
 
     <form action="/my_other_page" method="post">
         <h2>Coordonnées</h2>
         <div>
             <label for="name">Nom :<br /></label>
-            <input type="text" id="name" name="user_name" placeholder="Dupont" />
+            <input type="text" id="name" name="user_name" placeholder="Dupont" class="textZone" />
         </div>
         <div>
             <label for="firstname">Prénom :<br /></label>
-            <input type="text" id="firstname" name="user_firstname" placeholder="Michel" />
+            <input type="text" id="firstname" name="user_firstname" placeholder="Michel" class="textZone" />
         </div>
         <div>
             <label for="address">Adresse :<br /></label>
-            <input type="text" id="address" name="user_address" style="width:300px;" placeholder="30-32 Avenue de la République, 94800 Villejuif" />
+            <input type="text" id="address" name="user_address" placeholder="30-32 Avenue de la République, 94800 Villejuif" class="textZone" />
         </div>
 
         <div>
