@@ -1,28 +1,49 @@
 ﻿<!DOCTYPE html>
 
-<!-- 8. -->
+<!-- 9. -->
 
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <title>Formulaire</title>
+
+    <style>
+        div {
+            margin-top: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .notbold {
+            font-weight: normal;
+        }
+        legend {
+            font-weight: bold;
+            font-size: 2em;
+        }
+    </style>
+
     <form action="/my_other_page" method="post">
+        <h2>Coordonnées</h2>
         <div>
-            <label for="name">Nom :</label>
+            <label for="name">Nom :<br /></label>
             <input type="text" id="name" name="user_name" />
         </div>
         <div>
-            <label for="firstname">Prénom :</label>
+            <label for="firstname">Prénom :<br /></label>
             <input type="text" id="firstname" name="user_firstname" />
         </div>
         <div>
-            <label for="address">Adresse :</label>
-            <textarea id="address" name="user_address" rows="1"></textarea> <!-- rows="0" permet d'avoir une zone de texte sur 2 lignes -->
-            <!--
-            Sinon nous pouvons utiliser un input (qui remplace le "textarea") pour lequel nous définissons une longueur élevée :
+            <label for="address">Adresse :<br /></label>
             <input type="text" id="address" name="user_address" style="width:300px;" />
-        -->
         </div>
+
+        <div>
+            <!-- nous n'utilisons pas les balises "fieldset" ni "legend" car nous n'avons qu'une case à cocher -->
+            <label for="checkbox">Je  souhaite recevoir de la documentation</label>
+            <input type="checkbox" checked id="newsletter" name="newsletter" value="newsletter">
+        </div>
+
         <div>
             <label for="country">Pays :</label>
             <select>
@@ -33,43 +54,35 @@
                 <!-- </optgroup> -->
             </select>
         </div>
+
+
         <div>
-            <!-- nous n'utilisons pas les balises "fieldset" ni "legend" car nous n'avons qu'une case à cocher -->
-            <label for="checkbox">Je  souhaite recevoir de la documentation</label>
-            <input type="checkbox" checked id="newsletter" name="newsletter" value="newsletter">
+            <label>Sexe</label>
+            <input type="radio" checked id="male" name="gender" value="male">
+            <label for="male" class="notbold">Masculin</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" class="notbold">Féminin</label>
         </div>
 
-        <fieldset>
-            <legend>Quel est votre genre ?</legend>
-            <div>
-                <input type="radio" checked id="male" name="gender" value="male">
-                <label for="male">Masculin</label>
-            </div>
-            <div>
-                <input type="radio" id="female" name="gender" value="female">
-                <label for="female">Féminin</label>
-            </div>
-        </fieldset>
+        <div>
+            <fieldset>
+                <legend>Domaine(s) d'activité</legend>
+                <p>Vous pouvez en choisir plus qu'un...</p>
+                <div>
+                    <input type="checkbox" id="mechanical" name="activityDomain" value="mechanical">
+                    <label for="mechanical" class="notbold">Mécanique</label>
 
-        <fieldset>
-            <legend>Domaine d'activité</legend>
-            <div>
-                <label for="computing">Informatique</label>
-                <input type="checkbox" id="computing" name="activityDomain" value="computing">
-            </div>
-            <div>
-                <label for="mechanical">Mécanique</label>
-                <input type="checkbox" id="mechanical" name="activityDomain" value="mechanical">
-            </div>
-            <div>
-                <label for="electronic">Électronique</label>
-                <input type="checkbox" id="electronic" name="activityDomain" value="electronic">
-            </div>
-            <div>
-                <label for="other">Autre</label>
-                <input type="checkbox" id="other" name="activityDomain" value="other">
-            </div>
-        </fieldset>
+                    <input type="checkbox" id="electronic" name="activityDomain" value="electronic">
+                    <label for="electronic" class="notbold">Électronique</label>
+
+                    <input type="checkbox" id="computing" name="activityDomain" value="computing">
+                    <label for="computing" class="notbold">Informatique</label>
+
+                    <input type="checkbox" id="other" name="activityDomain" value="other">
+                    <label for="other" class="notbold">Autre</label>
+                </div>
+            </fieldset>
+        </div>
 
         <div>
             <button type="submit">Ajouter</button>
