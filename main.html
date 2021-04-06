@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<!-- 3. -->
+<!-- 4. -->
 
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -39,6 +39,16 @@
             border-bottom: 2px solid rgb(211, 211, 211);
             padding-bottom: 3px;
             margin-bottom: 5px;
+            caret-color: black;
+            transition: border-bottom 1s;
+            transition: caret-color 1s;
+        }
+
+        input:invalid {
+            border-bottom: 2px solid rgb(255, 80, 80);
+            caret-color: rgb(255, 80, 80);
+            transition: border-bottom 1s;
+            transition: caret-color 1s;
         }
 
         form {
@@ -75,9 +85,9 @@
             <fieldset>
                 <legend>Coordonnées</legend>
                 <div id="buttonsContainer">
-                    <input type="text" id="name" name="user_name" placeholder="Dupont" class="textZone" />
-                    <input type="text" id="firstname" name="user_firstname" placeholder="Michel" class="textZone" />
-                    <input type="email" id="email" name="user_email" placeholder="michel.dupont@dupont.dupont" class="textZone" />
+                    <input type="text" id="name" name="user_name" placeholder="Dupont" class="textZone" required />
+                    <input type="text" id="firstname" name="user_firstname" placeholder="Michel" class="textZone" required />
+                    <input type="email" id="email" name="user_email" placeholder="michel.dupont@dupont.dupont" class="textZone" required />
                     <select id="role">
                         <option selected>Etudiant</option>
                         <option>Enseignant</option>
