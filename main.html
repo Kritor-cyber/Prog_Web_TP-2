@@ -1,6 +1,6 @@
 ﻿<!DOCTYPE html>
 
-<!-- 5. -->
+<!-- 8. -->
 
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -30,56 +30,57 @@
             display: inline-block;
         }
     </style>
-
+</head>
+<body>
     <form action="/my_other_page" method="post">
         <fieldset>
             <legend>Coordonnées</legend>
-                <div>
-                    <label for="name">Nom :<br /></label>
-                    <input type="text" id="name" name="user_name" placeholder="Dupont" class="textZone" />
-                </div>
-                <div>
-                    <label for="firstname">Prénom :<br /></label>
-                    <input type="text" id="firstname" name="user_firstname" placeholder="Michel" class="textZone" />
-                </div>
-                <div>
-                    <label for="address">Adresse :<br /></label>
-                    <input type="text" id="address" name="user_address" placeholder="30-32 Avenue de la République, 94800 Villejuif" class="textZone" />
-                </div>
-                <div>
-                    <label for="email">Adresse :<br /></label>
-                    <input type="email" id="email" name="user_email" placeholder="michel.dupont@dupont.dupont" class="textZone" />
-                </div>
-                <div>
-                    <label for="password">Mot de passe :<br /></label>
-                    <input type="password" id="password" name="user_password" class="textZone" />
-                </div>
+            <div>
+                <label for="name">Nom :<br /></label>
+                <input type="text" id="name" name="user_name" placeholder="Dupont" class="textZone" />
+            </div>
+            <div>
+                <label for="firstname">Prénom :<br /></label>
+                <input type="text" id="firstname" name="user_firstname" placeholder="Michel" class="textZone" />
+            </div>
+            <div>
+                <label for="address">Adresse :<br /></label>
+                <input type="text" id="address" name="user_address" placeholder="30-32 Avenue de la République, 94800 Villejuif" class="textZone" />
+            </div>
+            <div>
+                <label for="email">Adresse :<br /></label>
+                <input type="email" id="email" name="user_email" placeholder="michel.dupont@dupont.dupont" class="textZone" />
+            </div>
+            <div>
+                <label for="password">Mot de passe :<br /></label>
+                <input type="password" id="password" name="user_password" class="textZone" />
+            </div>
 
-                <div>
-                    <!-- nous n'utilisons pas les balises "fieldset" ni "legend" car nous n'avons qu'une case à cocher -->
-                    <label for="checkbox">Je  souhaite recevoir de la documentation</label>
-                    <input type="checkbox" checked id="newsletter" name="newsletter" value="newsletter">
-                </div>
+            <div>
+                <!-- nous n'utilisons pas les balises "fieldset" ni "legend" car nous n'avons qu'une case à cocher -->
+                <label for="newsletter">Je  souhaite recevoir de la documentation</label>
+                <input type="checkbox" checked id="newsletter" name="newsletter" value="newsletter">
+            </div>
 
-                <div>
-                    <label for="country">Pays :</label>
-                    <select>
-                        <!-- <optgroup label="Europe"> inutile ici car nous n'avons que des pays d'Europe -->
-                        <option>Allemagne</option>
-                        <option selected>France</option>
-                        <option>Suisse</option>
-                        <!-- </optgroup> -->
-                    </select>
-                </div>
+            <div>
+                <label for="country">Pays :</label>
+                <select id="country">
+                    <!-- <optgroup label="Europe"> inutile ici car nous n'avons que des pays d'Europe -->
+                    <option>Allemagne</option>
+                    <option selected>France</option>
+                    <option>Suisse</option>
+                    <!-- </optgroup> -->
+                </select>
+            </div>
 
 
-                <div>
-                    <label>Sexe</label>
-                    <input type="radio" checked id="male" name="gender" value="male">
-                    <label for="male" class="notbold">Masculin</label>
-                    <input type="radio" id="female" name="gender" value="female">
-                    <label for="female" class="notbold">Féminin</label>
-                </div>
+            <div>
+                <label>Sexe</label>
+                <input type="radio" checked id="male" name="gender" value="male">
+                <label for="male" class="notbold">Masculin</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female" class="notbold">Féminin</label>
+            </div>
         </fieldset>
 
         <fieldset>
@@ -105,8 +106,5 @@
             <button type="reset">Supprimer</button>
         </div>
     </form>
-</head>
-<body>
-
 </body>
 </html>
